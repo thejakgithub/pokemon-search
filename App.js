@@ -17,11 +17,14 @@ import {
   TextInput
 } from 'react-native';
 
-
 const App = () => {
 
   useEffect(() => {
-    SplashScreen.hide();
+
+    setTimeout(function() {
+      SplashScreen.hide();
+  }, 1000);
+
   });
 
   const [poke, setPoke] = useState({
@@ -43,7 +46,6 @@ const App = () => {
         { text: "OK", onPress: () => console.log("OK Pressed") }
       ]
     );
-
 
   const searchPokemon = async () => {
     try {
